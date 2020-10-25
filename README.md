@@ -70,6 +70,7 @@ public class StdUI extends JFrame implements ActionListener
 			}
 1.登录页面代码完善过程
 1.1学生登录时用户名密码的判断
+
 	  try {
                 //读取存储学生信息的文件StuInformation.txt
 			FileReader reader = new FileReader("C:\\Users\\惠普\\Desktop\\StuInformation.txt");
@@ -122,6 +123,7 @@ public class StdUI extends JFrame implements ActionListener
 
 2.登录成功后页面代码完善
 2.1学生登录成功后页面代码
+
         	MainUI id1 = new MainUI();
         	id1.setVisible(false);  //将实例化的登录页面隐藏
         	MainUI pa1 = new MainUI();
@@ -146,7 +148,9 @@ public class StdUI extends JFrame implements ActionListener
 此代码为按钮事件判断，jb1为选课按钮，点击后转到选课界面。jb2为课程表按钮，点击后转到输出课程表的页面。
 
 2.2教师登录成功后页面代码
-同学生登录成功后页面代码 public void actionPerformed(ActionEvent e) {
+同学生登录成功后页面代码 
+
+public void actionPerformed(ActionEvent e) {
 if(e.getSource() == jb1){
 dispose();
 new KeChengGuanLiUI(); //创建一个新界面
@@ -158,6 +162,7 @@ new XueShengMingDanUI(); //创建一个新界面
 教师在功能选择上，有课程管理，用来显示课程安排。还有学生名单功能，用来显示学生信息。
 
 3.学生选课页面代码
+
 			    public void actionPerformed(ActionEvent e) {
 			            	StringBuilder info=new StringBuilder();
 			                if(cb1.isSelected()){
@@ -192,6 +197,7 @@ new XueShengMingDanUI(); //创建一个新界面
 在此页面，学生选课的信息会显示在文本框中，将此信息获取并转化为字符串格式，存储到文件中，文件名为Stu_Xuanke_infor_done.txt。
 
 4.学生课程表页面
+
 String[] columnNames =  
         { "课节数","星期一", "星期二", "星期三", "星期四", "星期五", "星期六","星期日" };  
  
@@ -255,6 +261,7 @@ try {
 写出课程表信息，存储到文件中。
 
 5.教师课程管理页面
+
 String[] columnNames =  
         { "课节数","星期一", "星期二", "星期三", "星期四", "星期五", "星期六","星期日" };           
         Object[][] obj=new Object[8][8];  
@@ -307,6 +314,7 @@ String[] columnNames =
 写出教师课程信息，存储到文件中。
 
 6.教师管理学生名单页面
+
  String[] columnNames =  
         { "学号","姓名",  "专业", "班级"};  
         Object[][] obj=new Object[7][7];  
